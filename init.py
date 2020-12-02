@@ -26,6 +26,7 @@ cur.execute("CREATE TABLE IF NOT EXISTS tickets (description TEXT,description_te
 cur.execute("CREATE TABLE IF NOT EXISTS tags (ticket_id INTEGER NOT NULL, name TEXT)")
 
 #insert tickets
+#inspired Dave CK comment: https://support.freshdesk.com/support/discussions/topics/321689
 
 stopper = False #prepping to exit the loop
 count = 1 #prepping a counter for a printer summary later on
@@ -41,7 +42,7 @@ while stopper == False:
         query = r.get(l, auth=(config('API_KEY'), 'X')) #query again using the new URL
         print('.', end='', flush=True)
         tickets = tickets + query.json() #add the new set of results to the existing list
-        count += 1 #carry on
+        count += 1
 
 for ticket in tickets:
     try:
