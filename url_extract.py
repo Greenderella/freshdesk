@@ -8,4 +8,4 @@ def extract_bw_url(body):
 
     links = filter(None, links_with_none)
 
-    return list(filter(lambda link: bool(re.match(r'^https?://.*bitwarden\.com', link)), links))
+    return list(filter(lambda link: bool(re.match(r'^https?://bitwarden\.com/help', link)), links))
