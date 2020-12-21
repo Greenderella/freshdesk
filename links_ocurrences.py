@@ -25,7 +25,7 @@ b = dict(a[:30])
 
 # colors
 color = cm.viridis_r(np.linspace(.4, .8, 30))
-bars = plt.bar(b.keys(), b.values(), color=color)
+bars = plt.bar(b.keys(), b.values(), color=color, width=0.7)
 
 # ocurrence number on each bar
 heights = [0, 25, 50]
@@ -40,6 +40,3 @@ plt.xlabel('Links')
 plt.xticks(rotation=90)
 
 plt.savefig('images/Most Shared links from our Help Center.png', dpi=300, bbox_inches='tight')
-plt.show()
-
-
