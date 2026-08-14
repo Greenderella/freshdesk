@@ -2,4 +2,7 @@
 *.db
 __pycache__/
 images/
-.vscode/
+.vscode/.env
+customer_messages_for_sentiment.csv
+skipped_ticket_ids.txt
+ticket_ids_from_search.txt
