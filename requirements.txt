@@ -1,4 +1,4 @@
-matplotlib==3.3.0
+matplotlib==3.11.1
 nltk==3.5
 numpy==1.18.5
 pandas==1.1.0
